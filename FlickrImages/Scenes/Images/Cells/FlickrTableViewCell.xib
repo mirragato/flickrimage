@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UnifiedPickerView" customModule="FlickrImages" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="FlickrTableViewCell" id="GrG-ba-Nc7" customClass="FlickrTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="656" height="624"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URH-tb-6Xm">
+                    <rect key="frame" x="16" y="36" width="624" height="572"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lUs-q3-d28">
+                            <rect key="frame" x="0.0" y="0.0" width="624" height="468"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="lUs-q3-d28" secondAttribute="height" multiplier="4:3" id="YbS-e4-Aps"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AYs-Pb-Auc">
+                            <rect key="frame" x="0.0" y="478" width="624" height="94"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="lUs-q3-d28" secondAttribute="trailing" id="1g8-e4-EKB"/>
+                        <constraint firstItem="AYs-Pb-Auc" firstAttribute="top" secondItem="lUs-q3-d28" secondAttribute="bottom" constant="10" id="D0Y-Yl-TlK"/>
+                        <constraint firstItem="lUs-q3-d28" firstAttribute="leading" secondItem="URH-tb-6Xm" secondAttribute="leading" id="Kte-pe-oIY"/>
+                        <constraint firstItem="lUs-q3-d28" firstAttribute="top" secondItem="URH-tb-6Xm" secondAttribute="top" id="Mek-G8-zb4"/>
+                        <constraint firstAttribute="trailing" secondItem="AYs-Pb-Auc" secondAttribute="trailing" id="Rgy-hX-eol"/>
+                        <constraint firstAttribute="bottom" secondItem="AYs-Pb-Auc" secondAttribute="bottom" id="Zec-JP-548"/>
+                        <constraint firstItem="AYs-Pb-Auc" firstAttribute="leading" secondItem="URH-tb-6Xm" secondAttribute="leading" id="uYZ-qW-TBU"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="d93-ab-OrY" firstAttribute="trailing" secondItem="URH-tb-6Xm" secondAttribute="trailing" constant="16" id="Vcy-jJ-SoU"/>
+                <constraint firstItem="d93-ab-OrY" firstAttribute="bottom" secondItem="URH-tb-6Xm" secondAttribute="bottom" constant="16" id="chY-cl-2dK"/>
+                <constraint firstItem="URH-tb-6Xm" firstAttribute="leading" secondItem="d93-ab-OrY" secondAttribute="leading" constant="16" id="due-Yi-ELW"/>
+                <constraint firstItem="URH-tb-6Xm" firstAttribute="top" secondItem="d93-ab-OrY" secondAttribute="top" constant="16" id="oIH-9g-pGK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="d93-ab-OrY"/>
+            <connections>
+                <outlet property="flickerImage" destination="lUs-q3-d28" id="nS7-1C-7xM"/>
+                <outlet property="nameLabel" destination="AYs-Pb-Auc" id="HZh-Lp-hjN"/>
+            </connections>
+            <point key="canvasLocation" x="-113.59999999999999" y="53.073463268365821"/>
+        </view>
+    </objects>
+</document>
