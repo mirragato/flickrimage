@@ -15,10 +15,10 @@
 
 @implementation ImagesConfiguratorImplementation
 
-- (void)configure:(ImageViewController *) imageViewController {
+- (void)configure:(ImagesViewController *) imageViewController {
     ImagesViewRouterImplementation *router = [[ImagesViewRouterImplementation init] init:imageViewController];
     ImagesPresenterImplementation *presenter = [[ImagesPresenterImplementation init] init: imageViewController with: router];
-  //  imageViewController.presenter = presenter;
+    imageViewController.presenter = presenter;
 }
 
 @end

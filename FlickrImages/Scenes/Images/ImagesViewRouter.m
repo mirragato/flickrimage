@@ -10,7 +10,7 @@
 
 @implementation ImagesViewRouterImplementation
 
-- (instancetype)init: (ImageViewController *)imageViewController {
+- (instancetype)init: (ImagesViewController *)imageViewController {
     self.imageViewController = imageViewController;
 
     return self;

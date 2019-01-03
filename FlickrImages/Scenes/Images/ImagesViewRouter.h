@@ -15,10 +15,10 @@
 
 #pragma mark - ImagesViewRouterImplementation
 
-@class ImageViewController;
+@class ImagesViewController;
 
 @interface ImagesViewRouterImplementation : NSObject<ImageViewRouter>
-@property (nonatomic, strong) ImageViewController* imageViewController;
+@property (nonatomic, strong) ImagesViewController* imageViewController;
 
-- (instancetype)init:(ImageViewController *)imageViewController;
+- (instancetype)init:(ImagesViewController *)imageViewController;
 @end
