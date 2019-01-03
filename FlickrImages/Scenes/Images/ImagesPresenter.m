@@ -20,8 +20,8 @@
 
 }
 
-- (void)configure:(id<ImageCellView>)cell with:(int)row {
-
+- (void)configure:(FlickrTableViewCell*)cell with:(int)row {
+    [cell configure:_images[row]];
 }
 
 - (void)viewDidLoad {

@@ -14,7 +14,7 @@
 @protocol ImagesPresenter;
 #pragma mark - ImagesViewController
 
-@interface ImagesViewController : UIViewController
+@interface ImagesViewController : UIViewController <UITableViewDataSource , UITableViewDelegate>
 @property (nonatomic, strong) ImagesConfiguratorImplementation* configurator;
 @property (nonatomic, strong) id<ImagesPresenter> presenter;
 @end
