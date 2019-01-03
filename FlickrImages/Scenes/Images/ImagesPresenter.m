@@ -11,6 +11,8 @@
 @implementation ImagesPresenterImplementation
 
 - (instancetype)init: (id<ImagesView>) view with: (id<ImageViewRouter>) router {
+    _view = view;
+    _router = router;
     return self;
 }
 

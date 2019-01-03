@@ -9,6 +9,8 @@
 #import "ImagesViewController.h"
 
 @interface ImagesViewController()<ImagesView>
+@property (nonatomic, strong) ImagesConfiguratorImplementation* configurator;
+@property (nonatomic, strong) id<ImagesPresenter> presenter;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 

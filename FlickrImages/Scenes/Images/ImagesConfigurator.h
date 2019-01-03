@@ -11,14 +11,14 @@
 
 
 #pragma mark - ImagesConfiguration
-@class ImageViewController;
+@class ImagesViewController;
 @protocol ImagesConfiguration
--(void) configure:(ImageViewController *) imageViewController;
+-(void) configure:(ImagesViewController *) imageViewController;
 @end
 
 
 #pragma mark - ImagesConfiguratorImplementation
 
 @interface ImagesConfiguratorImplementation : NSObject<ImagesConfiguration>
--(void) configure:(ImageViewController *) imageViewController;
+-(void) configure:(ImagesViewController *) imageViewController;
 @end

@@ -7,13 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ImagesPresenter.h"
 #import "ImagesConfigurator.h"
+#import "ImagesPresenter.h"
 
 
 #pragma mark - ImagesViewController
 
 @interface ImagesViewController : UIViewController
-@property (nonatomic, strong) id<ImagesPresenter> presenter;
-@property (nonatomic, strong) ImagesConfiguratorImplementation* configurator;
 @end
