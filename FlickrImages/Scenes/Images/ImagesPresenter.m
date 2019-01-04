@@ -16,11 +16,11 @@
     return self;
 }
 
-- (void) configure: (id<ImageCellView>) cell display: (id<DisplayImagesUseCase>) displayImagesUseCase with: (int) row {
+- (void) configure: (id<ImageCellView>) cell display: (id<DisplayImagesUseCase>) displayImagesUseCase with: (NSInteger) row {
 
 }
 
-- (void)configure:(FlickrTableViewCell*)cell with:(int)row {
+- (void)configure:(FlickrTableViewCell*)cell with:(NSInteger)row {
     [cell configure:_images[row]];
 }
 

@@ -11,8 +11,6 @@
 
 @implementation FlickrTableViewCell
 
-NSString *const identifier = @"SearchTableViewCell";
-
 - (void)configure:(Image *)image {
     self.textLabel.text = image.title;
     NSData *data = [NSData dataWithContentsOfURL:image.getImageUrl];

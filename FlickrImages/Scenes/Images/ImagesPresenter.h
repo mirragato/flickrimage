@@ -29,10 +29,10 @@
 #pragma mark - ImagesPresenter
 
 @protocol ImagesPresenter
-@property (nonatomic) NSInteger* numberOfImages;
+@property (nonatomic) NSInteger numberOfImages;
 @property (nonatomic, readwrite) id<ImageViewRouter> router;
 -(void) viewDidLoad;
--(void) configure: (FlickrTableViewCell*) cell with: (int) row;
+-(void) configure: (FlickrTableViewCell*) cell with: (NSInteger) row;
 @end
 
 
@@ -42,9 +42,9 @@
 @property (nonatomic,weak) id<ImagesView> view;
 @property (nonatomic) id<ImageViewRouter> router;
 @property (nonatomic) NSArray<Image*>* images;
-@property (nonatomic) NSInteger* numberOfImages;
+@property (nonatomic) NSInteger numberOfImages;
 
 -(instancetype)init: (id<ImagesView>) view with: (id<ImageViewRouter>) router;
 -(void) viewDidLoad;
--(void) configure: (id<ImageCellView>) cell display: (id<DisplayImagesUseCase>) displayImagesUseCase with: (int) row;
+-(void) configure: (id<ImageCellView>) cell display: (id<DisplayImagesUseCase>) displayImagesUseCase with: (NSInteger) row;
 @end

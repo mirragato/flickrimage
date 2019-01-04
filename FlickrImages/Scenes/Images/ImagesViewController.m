@@ -15,6 +15,7 @@
 @end
 
 @implementation ImagesViewController
+NSString *const identifierFlickrCell = @"FlickrTableViewCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,8 +24,8 @@
     [self configureTableView];
 }
 - (void)configureTableView {
-    [self.tableView registerNib:[UINib nibWithNibName:@"SearchTableViewCell" bundle:nil]
-         forCellReuseIdentifier:@"SearchTableViewCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:identifierFlickrCell bundle:nil]
+         forCellReuseIdentifier:identifierFlickrCell];
 }
 - (void)refreshImagesView {
 
@@ -42,11 +43,10 @@
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
 
-    static NSString *cellIdentifier = @"SearchTableViewCell";
-    FlickrTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    FlickrTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifierFlickrCell];
 
     if (cell == nil) {
-        cell = [[FlickrTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[FlickrTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifierFlickrCell];
     }
 
     [_presenter configure:cell with:indexPath.row];
@@ -74,7 +74,7 @@
     return nil;
 }
 
-// MARK:- UITableViewDelegate
+#pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:NO];

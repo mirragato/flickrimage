@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A28E0B921DF8299004FFB6A /* Extension+UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A28E0B821DF8299004FFB6A /* Extension+UIViewController.m */; };
 		2A3A884C21D36FBF0069C287 /* FlickrTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3A884B21D36FBF0069C287 /* FlickrTableViewCell.m */; };
 		2A3C00F921CFD73600BF418E /* FlickrTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A3C00F821CFD73600BF418E /* FlickrTableViewCell.xib */; };
 		2A3C00FD21CFE3F000BF418E /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C00FC21CFE3F000BF418E /* Image.m */; };
 		2A6D848C21D4CF8500FA45C8 /* ImagesConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6D848B21D4CF8500FA45C8 /* ImagesConfigurator.m */; };
+		2A81DD3121DFBCB00000E417 /* ApiImagesGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A81DD3021DFBCB00000E417 /* ApiImagesGateway.m */; };
+		2A81DD3321DFCC2F0000E417 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A81DD3221DFCC2F0000E417 /* NetworkManager.m */; };
 		2A8BD38221CE7BEF001B7461 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8BD38121CE7BEF001B7461 /* AppDelegate.m */; };
 		2A8BD38521CE7BEF001B7461 /* ImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8BD38421CE7BEF001B7461 /* ImagesViewController.m */; };
 		2A8BD38821CE7BEF001B7461 /* Images.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A8BD38621CE7BEF001B7461 /* Images.storyboard */; };
@@ -23,16 +26,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A28E0B721DF80BF004FFB6A /* Extension+UIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Extension+UIViewController.h"; sourceTree = "<group>"; };
+		2A28E0B821DF8299004FFB6A /* Extension+UIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Extension+UIViewController.m"; sourceTree = "<group>"; };
 		2A3A884B21D36FBF0069C287 /* FlickrTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickrTableViewCell.m; sourceTree = "<group>"; };
 		2A3A884D21D36FE10069C287 /* FlickrTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlickrTableViewCell.h; sourceTree = "<group>"; };
 		2A3C00F821CFD73600BF418E /* FlickrTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlickrTableViewCell.xib; sourceTree = "<group>"; };
 		2A3C00FC21CFE3F000BF418E /* Image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Image.m; sourceTree = "<group>"; };
 		2A3C00FE21CFE4D100BF418E /* Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
 		2A3C010121CFE5B700BF418E /* ImagesGateway.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImagesGateway.h; sourceTree = "<group>"; };
-		2A6C6FC821D7762A0090B3A5 /* ViewRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewRouter.h; sourceTree = "<group>"; };
 		2A6D848A21D4CD0F00FA45C8 /* ImagesConfigurator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImagesConfigurator.h; sourceTree = "<group>"; };
 		2A6D848B21D4CF8500FA45C8 /* ImagesConfigurator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImagesConfigurator.m; sourceTree = "<group>"; };
 		2A6D848D21D4D25500FA45C8 /* ImagesPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImagesPresenter.h; sourceTree = "<group>"; };
+		2A81DD2E21DF97E00000E417 /* API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
+		2A81DD2F21DFB9C90000E417 /* ApiImagesGateway.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiImagesGateway.h; sourceTree = "<group>"; };
+		2A81DD3021DFBCB00000E417 /* ApiImagesGateway.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiImagesGateway.m; sourceTree = "<group>"; };
+		2A81DD3221DFCC2F0000E417 /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		2A8BD37D21CE7BEF001B7461 /* FlickrImages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrImages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A8BD38021CE7BEF001B7461 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2A8BD38121CE7BEF001B7461 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				2ACBD20621D4EBAC00465C93 /* API */,
+				2A81DD3221DFCC2F0000E417 /* NetworkManager.m */,
 			);
 			path = EntityGateway;
 			sourceTree = "<group>";
@@ -143,7 +152,8 @@
 		2A6C6FC721D776050090B3A5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				2A6C6FC821D7762A0090B3A5 /* ViewRouter.h */,
+				2A28E0B721DF80BF004FFB6A /* Extension+UIViewController.h */,
+				2A28E0B821DF8299004FFB6A /* Extension+UIViewController.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -210,6 +220,7 @@
 		2ACBD20721D513E100465C93 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				2A81DD2E21DF97E00000E417 /* API.h */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -217,6 +228,8 @@
 		2ACBD20821D5142F00465C93 /* Gateways */ = {
 			isa = PBXGroup;
 			children = (
+				2A81DD2F21DFB9C90000E417 /* ApiImagesGateway.h */,
+				2A81DD3021DFBCB00000E417 /* ApiImagesGateway.m */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -302,8 +315,11 @@
 			files = (
 				2A8BD38521CE7BEF001B7461 /* ImagesViewController.m in Sources */,
 				2A3A884C21D36FBF0069C287 /* FlickrTableViewCell.m in Sources */,
+				2A28E0B921DF8299004FFB6A /* Extension+UIViewController.m in Sources */,
 				2ACBD20521D4E72E00465C93 /* DisplayImages.m in Sources */,
+				2A81DD3321DFCC2F0000E417 /* NetworkManager.m in Sources */,
 				2A8BD39021CE7BF1001B7461 /* main.m in Sources */,
+				2A81DD3121DFBCB00000E417 /* ApiImagesGateway.m in Sources */,
 				2A6D848C21D4CF8500FA45C8 /* ImagesConfigurator.m in Sources */,
 				2A8BD38221CE7BEF001B7461 /* AppDelegate.m in Sources */,
 				2ACBD21121D51FA900465C93 /* ImagesPresenter.m in Sources */,

@@ -17,7 +17,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (nonatomic, strong) Image *image;
 
-extern NSString*_Nonnull const identifier;
-
 -(void) configure:(Image *) image;
 @end
