@@ -23,6 +23,9 @@
 }
 
 -(NSInteger) numberOfImages {
+    if (_images == nil) {
+        return 0;
+    }
     return _images.count;
 }
 

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A28E0B921DF8299004FFB6A /* Extension+UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A28E0B821DF8299004FFB6A /* Extension+UIViewController.m */; };
 		2A3A884C21D36FBF0069C287 /* FlickrTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3A884B21D36FBF0069C287 /* FlickrTableViewCell.m */; };
 		2A3BEE3E21E4A90600D43CE3 /* ImageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3BEE3D21E4A90600D43CE3 /* ImageRequest.m */; };
 		2A3C00F921CFD73600BF418E /* FlickrTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A3C00F821CFD73600BF418E /* FlickrTableViewCell.xib */; };
@@ -27,8 +26,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2A28E0B721DF80BF004FFB6A /* Extension+UIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Extension+UIViewController.h"; sourceTree = "<group>"; };
-		2A28E0B821DF8299004FFB6A /* Extension+UIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Extension+UIViewController.m"; sourceTree = "<group>"; };
 		2A3A884B21D36FBF0069C287 /* FlickrTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickrTableViewCell.m; sourceTree = "<group>"; };
 		2A3A884D21D36FE10069C287 /* FlickrTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlickrTableViewCell.h; sourceTree = "<group>"; };
 		2A3BEE3D21E4A90600D43CE3 /* ImageRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageRequest.m; sourceTree = "<group>"; };
@@ -151,15 +148,6 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
-		2A6C6FC721D776050090B3A5 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				2A28E0B721DF80BF004FFB6A /* Extension+UIViewController.h */,
-				2A28E0B821DF8299004FFB6A /* Extension+UIViewController.m */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
 		2A8BD37421CE7BEF001B7461 = {
 			isa = PBXGroup;
 			children = (
@@ -179,7 +167,6 @@
 		2A8BD37F21CE7BEF001B7461 /* FlickrImages */ = {
 			isa = PBXGroup;
 			children = (
-				2A6C6FC721D776050090B3A5 /* Common */,
 				2A3C00FA21CFE3C000BF418E /* Core */,
 				2A3A884721D36F290069C287 /* EntityGateway */,
 				2A3A884521D36EE50069C287 /* Scenes */,
@@ -313,7 +300,6 @@
 				2A8BD38521CE7BEF001B7461 /* ImagesViewController.m in Sources */,
 				2A3BEE3E21E4A90600D43CE3 /* ImageRequest.m in Sources */,
 				2A3A884C21D36FBF0069C287 /* FlickrTableViewCell.m in Sources */,
-				2A28E0B921DF8299004FFB6A /* Extension+UIViewController.m in Sources */,
 				2ACBD20521D4E72E00465C93 /* DisplayImages.m in Sources */,
 				2A81DD3321DFCC2F0000E417 /* NetworkManager.m in Sources */,
 				2A8BD39021CE7BF1001B7461 /* main.m in Sources */,
@@ -511,7 +497,7 @@
 				2A8BD39221CE7BF1001B7461 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		2A8BD39321CE7BF1001B7461 /* Build configuration list for PBXNativeTarget "FlickrImages" */ = {
 			isa = XCConfigurationList;
@@ -520,7 +506,7 @@
 				2A8BD39521CE7BF1001B7461 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

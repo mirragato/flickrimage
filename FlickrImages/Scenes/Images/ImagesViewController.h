@@ -9,13 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "ImagesConfigurator.h"
 #import "ImagesPresenter.h"
-#import "Extension+UIViewController.h"
 
 @class ImagesConfiguratorImplementation;
 @protocol ImagesPresenter;
+@protocol ImagesView;
+
 #pragma mark - ImagesViewController
 
-@interface ImagesViewController : UIViewController <UITableViewDataSource , UITableViewDelegate>
-@property (nonatomic, strong) ImagesConfiguratorImplementation* configurator;
+@interface ImagesViewController : UIViewController <UITableViewDataSource , UITableViewDelegate, ImagesView>
+@property (readwrite, nonatomic, retain) ImagesConfiguratorImplementation* configurator;
 @property (nonatomic, strong) id<ImagesPresenter> presenter;
 @end

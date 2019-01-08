@@ -11,6 +11,6 @@
 #import <UIKit/UIKit.h>
 
 
-@interface Image (NetworkManager)
-+ (instancetype)initWithJSON:(NSDictionary *)dictionary;
+@interface Image(NetworkManager)
++ (id)initWithJSON:(NSDictionary *)dictionary;
 @end

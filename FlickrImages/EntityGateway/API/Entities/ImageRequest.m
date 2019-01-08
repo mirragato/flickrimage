@@ -10,16 +10,14 @@
 
 @implementation Image (NetworkManager)
 
-+ (instancetype)initWithJSON:(NSDictionary *)json {
-    Image *image = [Image init];
-    if (image) {
-        image.imageId = json[@"id"];
-        image.farm = json[@"farm"];
-        image.secret = json[@"secret"];
-        image.server = json[@"server"];
-        image.title = json[@"title"];
-        image.url = json[@"url_m"];
-    }
++ (id)initWithJSON:(NSDictionary *)json {
+    Image *image = [[Image alloc] initWithImageId:json[@"id"]
+                                             farm:json[@"farm"]
+                                           secret:json[@"secret"]
+                                           server:json[@"server"]
+                                            title:json[@"title"]
+                                              url:json[@"url_m"]];
+
     return image;
 }
 

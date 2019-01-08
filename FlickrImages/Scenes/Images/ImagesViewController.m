@@ -16,23 +16,31 @@
 
 @implementation ImagesViewController
 NSString *const identifierFlickrCell = @"FlickrTableViewCell";
+@synthesize configurator;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [_configurator configure:self];
+    configurator = [[ImagesConfiguratorImplementation alloc] init];
+    [configurator configure:self];
     [_presenter viewDidLoad];
     [self configureTableView];
 }
+
 - (void)configureTableView {
     [self.tableView registerNib:[UINib nibWithNibName:identifierFlickrCell bundle:nil]
          forCellReuseIdentifier:identifierFlickrCell];
 }
+
 - (void)refreshImagesView {
     [_tableView reloadData];
 }
 
 - (void)displayError:(NSString *)title message:(NSString *)message {
-    [self presentAlert:title withMessage:message];
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleCancel handler:nil];
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 
@@ -49,18 +57,13 @@ NSString *const identifierFlickrCell = @"FlickrTableViewCell";
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
 
     FlickrTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifierFlickrCell];
+    cell = [[FlickrTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifierFlickrCell];
 
-    if (cell == nil) {
-        cell = [[FlickrTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifierFlickrCell];
+    if (cell != nil) {
+        [_presenter configure:cell with:indexPath.row];
     }
 
-    [_presenter configure:cell with:indexPath.row];
     return cell;
-}
-
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 60;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -74,9 +77,6 @@ NSString *const identifierFlickrCell = @"FlickrTableViewCell";
     spinner.frame = CGRectMake( 0, 0,  self.tableView.frame.size.width  ,  44);
     return spinner;
 
-}
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    return nil;
 }
 
 #pragma mark - UITableViewDelegate

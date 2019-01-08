@@ -12,11 +12,8 @@
 @implementation FlickrTableViewCell
 
 - (void)configure:(Image *)image {
-    self.textLabel.text = image.title;
-    NSData *data = [NSData dataWithContentsOfURL:image.url];
-    self.imageView.image = [UIImage imageWithData:data];
-
-    [self setNeedsLayout];
+    _nameLabel.text = image.title;
+    _flickerImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:image.url]]];
 }
 
 @end

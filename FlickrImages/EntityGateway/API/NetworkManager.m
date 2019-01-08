@@ -27,7 +27,7 @@
 
 NSString *const flickrAPIKey = @"610c700dd4a1dac161d966035283419d";
 NSString *const flickrMethod = @"flickr.photos.getRecent";
-NSString *const baseURL = @"https://api.flickr.com/services/rest";
+NSString *const baseURL = @"https://www.flickr.com/services/rest/";
 
 + (instancetype)sharedManager {
     static id instance;
@@ -40,7 +40,7 @@ NSString *const baseURL = @"https://api.flickr.com/services/rest";
 
 - (void)getRecent:(void (^)(FlickrAPIResponse *response))completion
 {
-    NSString *urlText = [NSString stringWithFormat: @"%@?method=%@&api_key=%@&extras=owner_name&format=json", baseURL,flickrMethod, flickrAPIKey];
+    NSString *urlText = [NSString stringWithFormat: @"%@?method=%@&api_key=%@&extras=url_m&format=json&nojsoncallback=1", baseURL,flickrMethod, flickrAPIKey];
     NSURL *url = [NSURL URLWithString:urlText];
 
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
@@ -51,13 +51,17 @@ NSString *const baseURL = @"https://api.flickr.com/services/rest";
         FlickrAPIResponse *response;
 
         if ([result isKindOfClass:[NSDictionary class]]) {
-
             response = [[FlickrAPIResponse alloc] initWithJSON:result keyForResults:@"photos.photo"];
-            if ([result isKindOfClass:[NSArray class]]){
-                NSArray *parsedResults = result;
 
-                for (NSDictionary *dictionary in parsedResults)
-                    [Image initWithJSON: dictionary];
+            if ([response.results isKindOfClass:[NSArray class]]){
+                NSArray *parsedResults = response.results;
+                NSMutableArray *results = [[NSMutableArray alloc] initWithCapacity:40];
+
+                for (NSDictionary *dictionary in parsedResults){
+                    Image *image = [Image initWithJSON: dictionary];
+                    [results addObject:image];
+                }
+                response.results = results;
             }
         }
 
@@ -65,8 +69,6 @@ NSString *const baseURL = @"https://api.flickr.com/services/rest";
             if (completion) completion (response);
         });
     });
-
-
 }
 
 @end
