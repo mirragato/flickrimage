@@ -18,6 +18,7 @@
 
 @protocol ImagesView
 -(void) refreshImagesView;
+-(void) displayError: (NSString*) title message: (NSString*) message;
 @end
 
 #pragma mark - ImageCellView
@@ -41,10 +42,9 @@
 @interface ImagesPresenterImplementation : NSObject<ImagesPresenter>
 @property (nonatomic,weak) id<ImagesView> view;
 @property (nonatomic) id<ImageViewRouter> router;
+@property (nonatomic) id<DisplayImagesUseCase> displayImagesUseCase;
 @property (nonatomic) NSArray<Image*>* images;
 @property (nonatomic) NSInteger numberOfImages;
 
--(instancetype)init: (id<ImagesView>) view with: (id<ImageViewRouter>) router;
--(void) viewDidLoad;
--(void) configure: (id<ImageCellView>) cell display: (id<DisplayImagesUseCase>) displayImagesUseCase with: (NSInteger) row;
+-(instancetype)init: (id<ImagesView>) view with: (id<ImageViewRouter>) router displayImage: (id<DisplayImagesUseCase>) displayImagesUseCase;
 @end

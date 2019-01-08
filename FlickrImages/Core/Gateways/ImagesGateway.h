@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "Image.h"
 
-typedef void (^FetchImageEntityGatewayCompletion)(NSArray<Image*>*);
+typedef void (^FetchImageEntityGatewayCompletion)(NSArray<Image *>*);
 
 @protocol ImagesGateway
-- (void) fetchImages: (FetchImageEntityGatewayCompletion *) onSuccess onFailure: (NSError *) onFailure;
+- (void) fetchImages: (FetchImageEntityGatewayCompletion) onSuccess onFailure: (void (^) (NSError*)) onFailure;
 @end

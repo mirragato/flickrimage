@@ -13,7 +13,7 @@
 
 - (void)configure:(Image *)image {
     self.textLabel.text = image.title;
-    NSData *data = [NSData dataWithContentsOfURL:image.getImageUrl];
+    NSData *data = [NSData dataWithContentsOfURL:image.url];
     self.imageView.image = [UIImage imageWithData:data];
 
     [self setNeedsLayout];

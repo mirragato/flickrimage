@@ -11,16 +11,12 @@
 @implementation DisplayImagesListUseCaseImplementation
 
 - (instancetype)init: (id<ImagesGateway>) imagesGateway {
-    self.imagesGateway = imagesGateway;
-
+    _imagesGateway = imagesGateway;
     return self;
 }
 
-- (void)displayImagesOnSuccess: (nullable void (^) (NSArray<Image*>*)) onSuccess onFailure: (NSError *) onFailure {
-
-}
-
-- (void)displayImages:(__autoreleasing DisplayImagesUseCaseCompletionHandler *)onSuccess onFailure:(NSError *)onFailure {
+- (void)displayImages: (DisplayImagesUseCaseCompletionHandler) onSuccess onFailure: (void (^) (NSError *)) onFailure {
+    [_imagesGateway fetchImages: onSuccess onFailure: onFailure];
 }
 
 @end

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2A28E0B921DF8299004FFB6A /* Extension+UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A28E0B821DF8299004FFB6A /* Extension+UIViewController.m */; };
 		2A3A884C21D36FBF0069C287 /* FlickrTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3A884B21D36FBF0069C287 /* FlickrTableViewCell.m */; };
+		2A3BEE3E21E4A90600D43CE3 /* ImageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3BEE3D21E4A90600D43CE3 /* ImageRequest.m */; };
 		2A3C00F921CFD73600BF418E /* FlickrTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A3C00F821CFD73600BF418E /* FlickrTableViewCell.xib */; };
 		2A3C00FD21CFE3F000BF418E /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C00FC21CFE3F000BF418E /* Image.m */; };
 		2A6D848C21D4CF8500FA45C8 /* ImagesConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6D848B21D4CF8500FA45C8 /* ImagesConfigurator.m */; };
@@ -30,6 +31,7 @@
 		2A28E0B821DF8299004FFB6A /* Extension+UIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Extension+UIViewController.m"; sourceTree = "<group>"; };
 		2A3A884B21D36FBF0069C287 /* FlickrTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickrTableViewCell.m; sourceTree = "<group>"; };
 		2A3A884D21D36FE10069C287 /* FlickrTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlickrTableViewCell.h; sourceTree = "<group>"; };
+		2A3BEE3D21E4A90600D43CE3 /* ImageRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageRequest.m; sourceTree = "<group>"; };
 		2A3C00F821CFD73600BF418E /* FlickrTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlickrTableViewCell.xib; sourceTree = "<group>"; };
 		2A3C00FC21CFE3F000BF418E /* Image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Image.m; sourceTree = "<group>"; };
 		2A3C00FE21CFE4D100BF418E /* Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
@@ -37,10 +39,11 @@
 		2A6D848A21D4CD0F00FA45C8 /* ImagesConfigurator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImagesConfigurator.h; sourceTree = "<group>"; };
 		2A6D848B21D4CF8500FA45C8 /* ImagesConfigurator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImagesConfigurator.m; sourceTree = "<group>"; };
 		2A6D848D21D4D25500FA45C8 /* ImagesPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImagesPresenter.h; sourceTree = "<group>"; };
-		2A81DD2E21DF97E00000E417 /* API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
 		2A81DD2F21DFB9C90000E417 /* ApiImagesGateway.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiImagesGateway.h; sourceTree = "<group>"; };
 		2A81DD3021DFBCB00000E417 /* ApiImagesGateway.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiImagesGateway.m; sourceTree = "<group>"; };
 		2A81DD3221DFCC2F0000E417 /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		2A81DD3421E003B90000E417 /* ImageRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageRequest.h; sourceTree = "<group>"; };
+		2A81DD3521E0077C0000E417 /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		2A8BD37D21CE7BEF001B7461 /* FlickrImages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrImages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A8BD38021CE7BEF001B7461 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2A8BD38121CE7BEF001B7461 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -98,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				2ACBD20621D4EBAC00465C93 /* API */,
-				2A81DD3221DFCC2F0000E417 /* NetworkManager.m */,
 			);
 			path = EntityGateway;
 			sourceTree = "<group>";
@@ -126,8 +128,8 @@
 		2A3C00FB21CFE3D000BF418E /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				2A3C00FC21CFE3F000BF418E /* Image.m */,
 				2A3C00FE21CFE4D100BF418E /* Image.h */,
+				2A3C00FC21CFE3F000BF418E /* Image.m */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -212,7 +214,8 @@
 			children = (
 				2ACBD20721D513E100465C93 /* Entities */,
 				2ACBD20821D5142F00465C93 /* Gateways */,
-				2ACBD20921D5143C00465C93 /* Requests */,
+				2A81DD3521E0077C0000E417 /* NetworkManager.h */,
+				2A81DD3221DFCC2F0000E417 /* NetworkManager.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -220,7 +223,8 @@
 		2ACBD20721D513E100465C93 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				2A81DD2E21DF97E00000E417 /* API.h */,
+				2A81DD3421E003B90000E417 /* ImageRequest.h */,
+				2A3BEE3D21E4A90600D43CE3 /* ImageRequest.m */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -232,13 +236,6 @@
 				2A81DD3021DFBCB00000E417 /* ApiImagesGateway.m */,
 			);
 			path = Gateways;
-			sourceTree = "<group>";
-		};
-		2ACBD20921D5143C00465C93 /* Requests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Requests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A8BD38521CE7BEF001B7461 /* ImagesViewController.m in Sources */,
+				2A3BEE3E21E4A90600D43CE3 /* ImageRequest.m in Sources */,
 				2A3A884C21D36FBF0069C287 /* FlickrTableViewCell.m in Sources */,
 				2A28E0B921DF8299004FFB6A /* Extension+UIViewController.m in Sources */,
 				2ACBD20521D4E72E00465C93 /* DisplayImages.m in Sources */,

@@ -17,7 +17,7 @@
 @property (nonatomic, strong) NSString* title;
 @property (nonatomic, strong) NSURL* url;
 
-- (id)initWithPhotoId:(NSString *)_id
+- (id)initWithImageId:(NSString *)_id
                  farm:(NSString *)_farm
                secret:(NSString *)_secret
                server:(NSString *)_server

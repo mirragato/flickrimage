@@ -12,12 +12,11 @@
 typedef void (^DisplayImagesUseCaseCompletionHandler) (NSArray<Image*>* images);
 
 @protocol DisplayImagesUseCase
-- (void) displayImages: (DisplayImagesUseCaseCompletionHandler *) onSuccess  onFailure:(NSError *) onFailure;
+- (void) displayImages: (DisplayImagesUseCaseCompletionHandler) onSuccess  onFailure:(void (^) (NSError *)) onFailure;
 @end
 
 @interface DisplayImagesListUseCaseImplementation: NSObject<DisplayImagesUseCase>
 @property (nonatomic, strong) id<ImagesGateway> imagesGateway;
 
 -(instancetype)init: (id<ImagesGateway>) imagesGateway;
--(void)displayImagesOnSuccess:(nullable void (^) (NSArray<Image*>*))onSuccess onFailure: (NSError *) onFailure;
 @end

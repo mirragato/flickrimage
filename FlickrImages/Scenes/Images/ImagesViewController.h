@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ImagesConfigurator.h"
 #import "ImagesPresenter.h"
+#import "Extension+UIViewController.h"
 
 @class ImagesConfiguratorImplementation;
 @protocol ImagesPresenter;

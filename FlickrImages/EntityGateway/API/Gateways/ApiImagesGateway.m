@@ -10,8 +10,16 @@
 
 @implementation ApiImagesGatewayImplementation
 
-- (void)fetchImages:(__autoreleasing FetchImageEntityGatewayCompletion *)onSuccess onFailure:(NSError *)onFailure {
-    //TODO: request
+- (void)fetchImages:(FetchImageEntityGatewayCompletion)onSuccess onFailure:(void (^) (NSError*))onFailure {
+
+    [NetworkManager.sharedManager getRecent:^(FlickrAPIResponse *response) {
+        if (response.success) {
+            onSuccess(response.results);
+        } else {
+            NSError *error = [NSError errorWithDomain:response.message code:response.code userInfo:nil];
+            onFailure(error);
+        }
+    }];
 }
 
 @end

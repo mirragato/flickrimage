@@ -28,8 +28,13 @@ NSString *const identifierFlickrCell = @"FlickrTableViewCell";
          forCellReuseIdentifier:identifierFlickrCell];
 }
 - (void)refreshImagesView {
-
+    [_tableView reloadData];
 }
+
+- (void)displayError:(NSString *)title message:(NSString *)message {
+    [self presentAlert:title withMessage:message];
+}
+
 
 #pragma mark - UITableViewDataSource
 

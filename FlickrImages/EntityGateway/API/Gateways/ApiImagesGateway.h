@@ -7,7 +7,10 @@
 //
 #import <Foundation/Foundation.h>
 #import "ImagesGateway.h"
+#import "NetworkManager.h"
 
+
+#pragma mark - ApiImagesGatewayImplementation
 
 @interface ApiImagesGatewayImplementation: NSObject<ImagesGateway>
 

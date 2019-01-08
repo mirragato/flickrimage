@@ -17,7 +17,7 @@
 @synthesize title;
 @synthesize url;
 
-- (id)initWithPhotoId:(NSString *)_id
+- (id)initWithImageId:(NSString *)_id
                  farm:(NSString *)_farm
                secret:(NSString *)_secret
                server:(NSString *)_server
@@ -40,7 +40,7 @@
 }
 
 - (NSURL*) getImageUrl {
-    return [[NSURL alloc]initWithString:@"https://farm\(farm).staticflickr.com/\(server)/\(photoId)_\(secret)_m.jpg"];
+    return [[NSURL alloc]initWithString:@"https://farm\(farm).staticflickr.com/\(server)/\(imageId)_\(secret)_m.jpg"];
 }
 
 @end
