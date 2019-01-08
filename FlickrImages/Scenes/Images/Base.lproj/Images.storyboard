@@ -18,8 +18,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jfh-I1-8sh">
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flickr App" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qE8-qq-T4v">
+                                        <rect key="frame" x="10" y="5" width="76.5" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxc-Td-Czd">
+                                        <rect key="frame" x="313" y="5" width="47" height="40"/>
+                                        <state key="normal" title="Reload"/>
+                                        <connections>
+                                            <action selector="reloadImages:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3wf-1l-bG5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1Pu-C1-PTR"/>
+                                    <constraint firstAttribute="bottom" secondItem="qE8-qq-T4v" secondAttribute="bottom" constant="5" id="Bft-sk-52Q"/>
+                                    <constraint firstItem="Mxc-Td-Czd" firstAttribute="top" secondItem="Jfh-I1-8sh" secondAttribute="top" constant="5" id="HRn-b3-lHc"/>
+                                    <constraint firstItem="qE8-qq-T4v" firstAttribute="top" secondItem="Jfh-I1-8sh" secondAttribute="top" constant="5" id="SkZ-L1-NBT"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mxc-Td-Czd" secondAttribute="bottom" constant="5" id="TOc-MX-AqO"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mxc-Td-Czd" secondAttribute="trailing" constant="15" id="eER-67-Nsv"/>
+                                    <constraint firstItem="qE8-qq-T4v" firstAttribute="leading" secondItem="Jfh-I1-8sh" secondAttribute="leading" constant="10" id="phk-42-1CZ"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5RB-Ki-sP9">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="UVu-tv-8d6"/>
@@ -31,17 +59,22 @@
                         <constraints>
                             <constraint firstItem="5RB-Ki-sP9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2VU-0V-Pp8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5RB-Ki-sP9" secondAttribute="trailing" id="5Jz-IO-BwD"/>
+                            <constraint firstItem="Jfh-I1-8sh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6ba-Kw-QgI"/>
+                            <constraint firstItem="5RB-Ki-sP9" firstAttribute="top" secondItem="Jfh-I1-8sh" secondAttribute="bottom" constant="10" id="J3H-Z1-pHm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5RB-Ki-sP9" secondAttribute="bottom" id="Qhf-Tw-JYG"/>
-                            <constraint firstItem="5RB-Ki-sP9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lsa-Du-rWz"/>
+                            <constraint firstItem="Jfh-I1-8sh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aM4-bd-BPh"/>
+                            <constraint firstItem="Jfh-I1-8sh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mMj-D3-Q5D"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="reloadButton" destination="Mxc-Td-Czd" id="B69-AM-ShD"/>
                         <outlet property="tableView" destination="5RB-Ki-sP9" id="OgG-O3-VMP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="69.599999999999994" y="104.7976011994003"/>
         </scene>
     </scenes>
 </document>

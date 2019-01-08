@@ -12,16 +12,20 @@
 
 @interface ImagesViewController()<ImagesView>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIButton *reloadButton;
 @end
 
 @implementation ImagesViewController
 NSString *const identifierFlickrCell = @"FlickrTableViewCell";
+UIActivityIndicatorView* spinner;
 @synthesize configurator;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     configurator = [[ImagesConfiguratorImplementation alloc] init];
     [configurator configure:self];
+    [spinner startAnimating];
     [_presenter viewDidLoad];
     [self configureTableView];
 }
@@ -33,6 +37,12 @@ NSString *const identifierFlickrCell = @"FlickrTableViewCell";
 
 - (void)refreshImagesView {
     [_tableView reloadData];
+    [spinner stopAnimating];
+}
+
+-(IBAction) reloadImages:(id)sender {
+    [spinner startAnimating];
+    [_presenter viewDidLoad];
 }
 
 - (void)displayError:(NSString *)title message:(NSString *)message {
@@ -57,11 +67,13 @@ NSString *const identifierFlickrCell = @"FlickrTableViewCell";
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
 
     FlickrTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifierFlickrCell];
-    cell = [[FlickrTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifierFlickrCell];
 
-    if (cell != nil) {
-        [_presenter configure:cell with:indexPath.row];
+
+    if (cell == nil) {
+        cell = [[FlickrTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifierFlickrCell];
     }
+
+    [_presenter configure:cell with:indexPath.row];
 
     return cell;
 }
@@ -71,8 +83,6 @@ NSString *const identifierFlickrCell = @"FlickrTableViewCell";
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-
-    UIActivityIndicatorView* spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     [spinner startAnimating];
     spinner.frame = CGRectMake( 0, 0,  self.tableView.frame.size.width  ,  44);
     return spinner;

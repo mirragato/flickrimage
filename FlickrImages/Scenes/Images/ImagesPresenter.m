@@ -30,6 +30,8 @@
 }
 
 - (void)viewDidLoad {
+    _images = nil;
+    [_view refreshImagesView];
     [_displayImagesUseCase displayImages:^(NSArray<Image *> *images) {
         [self handleReceivedImages:images];
     } onFailure:^(NSError* error) {
