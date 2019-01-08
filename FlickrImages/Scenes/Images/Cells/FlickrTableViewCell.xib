@@ -25,30 +25,36 @@
                                 <constraint firstAttribute="width" secondItem="lUs-q3-d28" secondAttribute="height" multiplier="4:3" id="YbS-e4-Aps"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mmmk" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AYs-Pb-Auc">
-                            <rect key="frame" x="0.0" y="478" width="624" height="94"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AYs-Pb-Auc">
+                            <rect key="frame" x="0.0" y="478" width="520" height="94"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vpc-hp-ce0">
-                            <rect key="frame" x="566" y="410" width="50" height="50"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vpc-hp-ce0">
+                            <rect key="frame" x="530" y="478" width="94" height="94"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="Vpc-hp-ce0" secondAttribute="height" multiplier="1:1" id="RQs-5y-BjA"/>
                             </constraints>
+                            <color key="tintColor" red="0.95806234137055835" green="0.72050476013673503" blue="0.029039364614818455" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                             <state key="normal" image="mark"/>
+                            <connections>
+                                <action selector="tapMarkButton:" destination="GrG-ba-Nc7" eventType="touchUpInside" id="1Gu-tE-1vS"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="lUs-q3-d28" secondAttribute="trailing" id="1g8-e4-EKB"/>
-                        <constraint firstAttribute="trailing" secondItem="Vpc-hp-ce0" secondAttribute="trailing" constant="8" id="3LR-gd-uVi"/>
+                        <constraint firstAttribute="bottom" secondItem="Vpc-hp-ce0" secondAttribute="bottom" id="4Oq-Om-NiZ"/>
+                        <constraint firstAttribute="trailing" secondItem="Vpc-hp-ce0" secondAttribute="trailing" id="6Pw-rg-bIF"/>
+                        <constraint firstItem="Vpc-hp-ce0" firstAttribute="top" secondItem="AYs-Pb-Auc" secondAttribute="top" id="8vh-xT-S8E"/>
                         <constraint firstItem="AYs-Pb-Auc" firstAttribute="top" secondItem="lUs-q3-d28" secondAttribute="bottom" constant="10" id="D0Y-Yl-TlK"/>
+                        <constraint firstItem="Vpc-hp-ce0" firstAttribute="leading" secondItem="AYs-Pb-Auc" secondAttribute="trailing" constant="10" id="JEw-F7-iY1"/>
                         <constraint firstItem="lUs-q3-d28" firstAttribute="leading" secondItem="URH-tb-6Xm" secondAttribute="leading" id="Kte-pe-oIY"/>
                         <constraint firstItem="lUs-q3-d28" firstAttribute="top" secondItem="URH-tb-6Xm" secondAttribute="top" id="Mek-G8-zb4"/>
-                        <constraint firstAttribute="trailing" secondItem="AYs-Pb-Auc" secondAttribute="trailing" id="Rgy-hX-eol"/>
                         <constraint firstAttribute="bottom" secondItem="AYs-Pb-Auc" secondAttribute="bottom" id="Zec-JP-548"/>
-                        <constraint firstItem="lUs-q3-d28" firstAttribute="bottom" secondItem="Vpc-hp-ce0" secondAttribute="bottom" constant="8" id="sYj-CR-5pL"/>
                         <constraint firstItem="AYs-Pb-Auc" firstAttribute="leading" secondItem="URH-tb-6Xm" secondAttribute="leading" id="uYZ-qW-TBU"/>
                     </constraints>
                 </view>
@@ -64,6 +70,7 @@
             <viewLayoutGuide key="safeArea" id="d93-ab-OrY"/>
             <connections>
                 <outlet property="flickerImage" destination="lUs-q3-d28" id="nS7-1C-7xM"/>
+                <outlet property="markImage" destination="Vpc-hp-ce0" id="u3P-XF-XRa"/>
                 <outlet property="nameLabel" destination="AYs-Pb-Auc" id="HZh-Lp-hjN"/>
             </connections>
             <point key="canvasLocation" x="-113.59999999999999" y="53.073463268365821"/>

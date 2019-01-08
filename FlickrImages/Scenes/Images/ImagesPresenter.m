@@ -39,6 +39,10 @@
     }];
 }
 
+-(void) addMarkPressed: (FlickrTableViewCell*)cell {
+    //[];
+}
+
 -(void) handleError: (NSError*) error {
     [_view displayError:@"Error" message:error.localizedDescription];
 }

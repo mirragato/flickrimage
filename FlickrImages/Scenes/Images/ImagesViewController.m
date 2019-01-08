@@ -10,7 +10,7 @@
 #import "FlickrTableViewCell.h"
 #import "Image.h"
 
-@interface ImagesViewController()<ImagesView>
+@interface ImagesViewController()<ImagesView, MarkTableViewCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *reloadButton;
 @end
@@ -74,6 +74,7 @@ UIActivityIndicatorView* spinner;
     }
 
     [_presenter configure:cell with:indexPath.row];
+    cell.delegate = self;
 
     return cell;
 }
@@ -84,7 +85,7 @@ UIActivityIndicatorView* spinner;
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     [spinner startAnimating];
-    spinner.frame = CGRectMake( 0, 0,  self.tableView.frame.size.width  ,  44);
+    spinner.frame = CGRectMake( 0, 0,  self.tableView.frame.size.width,  44);
     return spinner;
 
 }
@@ -95,4 +96,7 @@ UIActivityIndicatorView* spinner;
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
+- (void)didChangeMarkState {
+    
+}
 @end

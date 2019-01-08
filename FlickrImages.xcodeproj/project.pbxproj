@@ -105,8 +105,8 @@
 		2A3A884E21D379B40069C287 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				2A3A884B21D36FBF0069C287 /* FlickrTableViewCell.m */,
 				2A3A884D21D36FE10069C287 /* FlickrTableViewCell.h */,
+				2A3A884B21D36FBF0069C287 /* FlickrTableViewCell.m */,
 				2A3C00F821CFD73600BF418E /* FlickrTableViewCell.xib */,
 			);
 			path = Cells;
