@@ -17,7 +17,6 @@
 #pragma mark - ImagesView
 
 @protocol MarkView
--(void) dispalyImages: (NSArray<Image*>*) images;
 -(void) refreshImagesView;
 @end
 
@@ -31,7 +30,7 @@
 @property (nonatomic, readwrite) id<MarkViewRouter> router;
 -(void) viewDidLoad;
 -(void) configure: (FlickrTableViewCell*) cell with: (NSInteger) row;
--(void) addMarkPressed: (FlickrTableViewCell*) cell;
+-(void) removeMarkPressed: (Image*) image;
 @end
 
 
@@ -40,8 +39,8 @@
 @interface MarkPresenterImplementation : NSObject<MarkPresenter>
 @property (nonatomic,weak) id<MarkView> view;
 @property (nonatomic) id<MarkViewRouter> router;
-@property (nonatomic) NSArray<Image*>* images;
+@property (nonatomic) NSMutableArray<Image*>* images;
 @property (nonatomic) NSInteger numberOfImages;
 
--(instancetype)init: (id<MarkView>) view with: (id<ImageViewRouter>) router;
+-(instancetype)init: (id<MarkView>) view with: (id<MarkViewRouter>) router;
 @end

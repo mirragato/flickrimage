@@ -6,7 +6,7 @@
 //  Copyright © 2019 epam. All rights reserved.
 //
 
-#import "ImagesConfigurator.h"
+#import "MarkConfigurator.h"
 #import "MarkViewRouter.h"
 #import "MarkPresenter.h"
 
@@ -19,4 +19,5 @@
     MarkPresenterImplementation *presenter = [[MarkPresenterImplementation alloc] init: markViewController with: router];
     markViewController.presenter = presenter;
 }
+
 @end

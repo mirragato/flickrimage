@@ -15,8 +15,5 @@
     
     return self;
 }
-- (void)dismiss {
-    
-}
 
 @end

@@ -9,10 +9,9 @@
 #import "ImagesViewController.h"
 
 @protocol MarkViewRouter
--(void) dismiss;
 @end
 
-#pragma mark - ImagesViewRouterImplementation
+#pragma mark - MarkViewRouterImplementation
 
 @class MarkViewController;
 

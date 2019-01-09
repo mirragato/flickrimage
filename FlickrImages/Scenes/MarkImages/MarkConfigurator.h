@@ -15,7 +15,7 @@
 
 @class MarkViewController;
 @protocol MarkConfiguration
--(void) configure:(MarkViewController *) markViewController images: (NSArray<Image*>*) images;
+-(void) configure:(MarkViewController *) markViewController;
 @end
 
 

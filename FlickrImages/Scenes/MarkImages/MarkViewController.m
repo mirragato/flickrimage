@@ -15,7 +15,7 @@
 @end
 
 @implementation MarkViewController
-NSString *const identifierFlickrCell = @"FlickrTableViewCell";
+NSString *const _identifierFlickrCell = @"FlickrTableViewCell";
 @synthesize configurator;
 
 - (void)viewDidLoad {
@@ -31,18 +31,13 @@ NSString *const identifierFlickrCell = @"FlickrTableViewCell";
 }
 
 - (void)configureTableView {
-    [self.tableView registerNib:[UINib nibWithNibName:identifierFlickrCell bundle:nil]
-         forCellReuseIdentifier:identifierFlickrCell];
+    [self.tableView registerNib:[UINib nibWithNibName:_identifierFlickrCell bundle:nil]
+         forCellReuseIdentifier:_identifierFlickrCell];
 }
 
 - (void)refreshImagesView {
     [_tableView reloadData];
 }
-
--(IBAction)reloadImages:(id)sender {
-    [self reloadTable];
-}
-
 
 #pragma mark - UITableViewDataSource
 
@@ -55,16 +50,16 @@ NSString *const identifierFlickrCell = @"FlickrTableViewCell";
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    
-    FlickrTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifierFlickrCell];
-    
+
+    FlickrTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:_identifierFlickrCell];
+
     if (cell == nil) {
-        cell = [[FlickrTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifierFlickrCell];
+        cell = [[FlickrTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:_identifierFlickrCell];
     }
-    
+
     [_presenter configure:cell with:indexPath.row];
     cell.delegate = self;
-    
+
     return cell;
 }
 
@@ -72,10 +67,16 @@ NSString *const identifierFlickrCell = @"FlickrTableViewCell";
     return UITableViewAutomaticDimension;
 }
 
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
+
 #pragma mark - MarkTableViewCellDelegate
 
-- (void)didChangeMarkState {
-    
+- (void)didChangeMarkState: (Image*) image {
+    [_presenter removeMarkPressed:image];
 }
 
 @end

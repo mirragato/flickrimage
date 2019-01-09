@@ -34,7 +34,6 @@
 @property (nonatomic, readwrite) id<ImageViewRouter> router;
 -(void) viewDidLoad;
 -(void) configure: (FlickrTableViewCell*) cell with: (NSInteger) row;
--(void) addMarkPressed: (FlickrTableViewCell*) cell;
 @end
 
 

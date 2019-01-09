@@ -24,7 +24,7 @@
     } else {
         [_markImage setImage:selectedImg forState:UIControlStateNormal];
     }
-    [_delegate didChangeMarkState];
+    [_delegate didChangeMarkState: _image];
 }
 
 @end

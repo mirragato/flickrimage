@@ -10,7 +10,6 @@
 #import "ImagesViewController.h"
 
 @protocol ImageViewRouter
--(void) detail;
 @end
 
 #pragma mark - ImagesViewRouterImplementation
@@ -20,6 +19,7 @@
 
 @interface ImagesViewRouterImplementation : NSObject<ImageViewRouter>
 @property (nonatomic, strong) ImagesViewController* imageViewController;
+@property (nonatomic) NSArray<Image*>* images;
 
 - (instancetype)init:(ImagesViewController *)imageViewController;
 @end

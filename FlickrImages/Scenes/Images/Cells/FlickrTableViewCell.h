@@ -10,7 +10,7 @@
 @class Image;
 
 @protocol MarkTableViewCellDelegate <NSObject>
--(void) didChangeMarkState;
+-(void) didChangeMarkState: (Image*) image;
 @end
 
 #pragma mark - FlickrTableViewCell

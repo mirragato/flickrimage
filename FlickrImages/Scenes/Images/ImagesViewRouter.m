@@ -15,10 +15,5 @@
 
     return self;
 }
-- (void)detail {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Images" bundle:nil];
-    MarkViewController *markViewController = (MarkViewController *)[storyboard instantiateViewControllerWithIdentifier:@"MarkViewController"];
-    [_imageViewController.navigationController pushViewController:markViewController animated:YES];
-}
 
 @end

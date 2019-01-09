@@ -86,12 +86,12 @@
 			children = (
 				24EBC30321E62C5B00DA9933 /* MarkConfigurator.h */,
 				24EBC30421E62C7A00DA9933 /* MarkConfigurator.m */,
+				24EBC30C21E6355500DA9933 /* MarkPresenter.h */,
+				24EBC30D21E636FE00DA9933 /* MarkPresenter.m */,
 				24EBC30621E62D2F00DA9933 /* MarkViewRouter.h */,
 				24EBC30721E62E2F00DA9933 /* MarkViewRouter.m */,
 				24EBC30921E632C000DA9933 /* MarkViewController.h */,
 				24EBC30A21E6331A00DA9933 /* MarkViewController.m */,
-				24EBC30C21E6355500DA9933 /* MarkPresenter.h */,
-				24EBC30D21E636FE00DA9933 /* MarkPresenter.m */,
 			);
 			path = MarkImages;
 			sourceTree = "<group>";

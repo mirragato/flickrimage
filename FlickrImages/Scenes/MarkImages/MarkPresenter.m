@@ -29,12 +29,12 @@
 }
 
 - (void)viewDidLoad {
-    [_view dispalyImages:_images];
     [_view refreshImagesView];
 }
 
-- (void)addMarkPressed:(FlickrTableViewCell *)cell {
-    
+- (void)removeMarkPressed:(Image *)image {
+    [_images removeObject:image];
+    [self viewDidLoad];
 }
 
 @end

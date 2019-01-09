@@ -48,10 +48,6 @@ NSString *const identifierFlickrCell = @"FlickrTableViewCell";
     [self reloadTable];
 }
 
--(IBAction)tapMarkButton:(id)sender {
-    //TODO: set mark controller
-}
-
 - (void)displayError:(NSString *)title message:(NSString *)message {
     UIAlertController* alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
 
@@ -103,8 +99,8 @@ NSString *const identifierFlickrCell = @"FlickrTableViewCell";
 
 #pragma mark - MarkTableViewCellDelegate
 
-- (void)didChangeMarkState {
-    
+- (void)didChangeMarkState: (Image*) image {
+   // [_presenter addMarkPressed:image];
 }
 
 @end
