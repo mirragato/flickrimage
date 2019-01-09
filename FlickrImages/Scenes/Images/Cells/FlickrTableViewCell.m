@@ -14,7 +14,7 @@
 - (void)configure:(Image *)image {
     _image = image;
     _nameLabel.text = image.title;
-    _flickerImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:image.url]]];
+    _flickerImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:image.url]];
 }
 
 -(IBAction) tapMarkButton:(id)sender {

@@ -55,7 +55,7 @@ NSString *const baseURL = @"https://www.flickr.com/services/rest/";
 
             if ([response.results isKindOfClass:[NSArray class]]){
                 NSArray *parsedResults = response.results;
-                NSMutableArray *results = [[NSMutableArray alloc] initWithCapacity:40];
+                NSMutableArray *results = [[NSMutableArray alloc] initWithCapacity:100];
 
                 for (NSDictionary *dictionary in parsedResults){
                     Image *image = [Image initWithJSON: dictionary];

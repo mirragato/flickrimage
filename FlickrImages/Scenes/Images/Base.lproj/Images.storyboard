@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="35r-gs-zOH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jfh-I1-8sh">
-                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flickr App" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qE8-qq-T4v">
                                         <rect key="frame" x="10" y="5" width="76.5" height="40"/>
@@ -34,32 +34,55 @@
                                             <action selector="reloadImages:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3wf-1l-bG5"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Sf-Hr-S1d">
+                                        <rect key="frame" x="258" y="5" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="7Sf-Hr-S1d" secondAttribute="height" multiplier="1:1" id="jmH-PN-13L"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="mark_fill"/>
+                                        <connections>
+                                            <action selector="tapMarkButton:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="qqW-mL-bjW"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="1Pu-C1-PTR"/>
                                     <constraint firstAttribute="bottom" secondItem="qE8-qq-T4v" secondAttribute="bottom" constant="5" id="Bft-sk-52Q"/>
+                                    <constraint firstItem="7Sf-Hr-S1d" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qE8-qq-T4v" secondAttribute="trailing" constant="10" id="DPc-ad-VhZ"/>
                                     <constraint firstItem="Mxc-Td-Czd" firstAttribute="top" secondItem="Jfh-I1-8sh" secondAttribute="top" constant="5" id="HRn-b3-lHc"/>
                                     <constraint firstItem="qE8-qq-T4v" firstAttribute="top" secondItem="Jfh-I1-8sh" secondAttribute="top" constant="5" id="SkZ-L1-NBT"/>
                                     <constraint firstAttribute="bottom" secondItem="Mxc-Td-Czd" secondAttribute="bottom" constant="5" id="TOc-MX-AqO"/>
                                     <constraint firstAttribute="trailing" secondItem="Mxc-Td-Czd" secondAttribute="trailing" constant="15" id="eER-67-Nsv"/>
+                                    <constraint firstItem="7Sf-Hr-S1d" firstAttribute="top" secondItem="Jfh-I1-8sh" secondAttribute="top" constant="5" id="jWK-9r-Szg"/>
+                                    <constraint firstItem="Mxc-Td-Czd" firstAttribute="leading" secondItem="7Sf-Hr-S1d" secondAttribute="trailing" constant="15" id="kX3-rx-ywB"/>
                                     <constraint firstItem="qE8-qq-T4v" firstAttribute="leading" secondItem="Jfh-I1-8sh" secondAttribute="leading" constant="10" id="phk-42-1CZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="7Sf-Hr-S1d" secondAttribute="bottom" constant="5" id="pn4-Fw-vql"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5RB-Ki-sP9">
-                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                                <rect key="frame" x="0.0" y="124" width="375" height="543"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="UVu-tv-8d6"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="RfJ-Sa-giW"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="tdw-hd-8LN">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tdw-hd-8LN" secondAttribute="height" multiplier="1:1" id="TUt-RD-gNx"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5RB-Ki-sP9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2VU-0V-Pp8"/>
+                            <constraint firstItem="tdw-hd-8LN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="31a-YP-ll2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5RB-Ki-sP9" secondAttribute="trailing" id="5Jz-IO-BwD"/>
                             <constraint firstItem="Jfh-I1-8sh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6ba-Kw-QgI"/>
+                            <constraint firstItem="tdw-hd-8LN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8xw-Kt-51B"/>
                             <constraint firstItem="5RB-Ki-sP9" firstAttribute="top" secondItem="Jfh-I1-8sh" secondAttribute="bottom" constant="10" id="J3H-Z1-pHm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5RB-Ki-sP9" secondAttribute="bottom" id="Qhf-Tw-JYG"/>
                             <constraint firstItem="Jfh-I1-8sh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aM4-bd-BPh"/>
@@ -67,8 +90,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="euc-VI-sRj"/>
                     <connections>
                         <outlet property="reloadButton" destination="Mxc-Td-Czd" id="B69-AM-ShD"/>
+                        <outlet property="spinner" destination="tdw-hd-8LN" id="ucc-JD-zmx"/>
                         <outlet property="tableView" destination="5RB-Ki-sP9" id="OgG-O3-VMP"/>
                     </connections>
                 </viewController>
@@ -76,5 +101,50 @@
             </objects>
             <point key="canvasLocation" x="69.599999999999994" y="104.7976011994003"/>
         </scene>
+        <!--Mark View Controller-->
+        <scene sceneID="eMF-jn-Plv">
+            <objects>
+                <viewController storyboardIdentifier="MarkViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jes-Dh-xhf" customClass="MarkViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="js4-NQ-W7W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mFP-hx-IWZ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Mark Images" id="aQg-N5-Kal">
+                                        <barButtonItem key="backBarButtonItem" title="Back" id="2Yj-ww-BLr" userLabel="Back"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ele-d5-cTA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7KW-4G-Gm6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873" y="105"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5Ci-8a-zY8">
+            <objects>
+                <navigationController id="35r-gs-zOH" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VS0-Qb-1SB">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Llc-fg-OQy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7AR-MQ-MqM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-882" y="105"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="mark_fill" width="50" height="50"/>
+    </resources>
 </document>

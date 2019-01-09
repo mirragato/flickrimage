@@ -16,7 +16,7 @@
                                            secret:json[@"secret"]
                                            server:json[@"server"]
                                             title:json[@"title"]
-                                              url:json[@"url_m"]];
+                                              url:[NSURL URLWithString:json[@"url_m"]]];
 
     return image;
 }

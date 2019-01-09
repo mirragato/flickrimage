@@ -16,6 +16,7 @@
 #pragma mark - ImagesViewRouterImplementation
 
 @class ImagesViewController;
+@class MarkViewController;
 
 @interface ImagesViewRouterImplementation : NSObject<ImageViewRouter>
 @property (nonatomic, strong) ImagesViewController* imageViewController;

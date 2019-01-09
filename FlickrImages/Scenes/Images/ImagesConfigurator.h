@@ -20,5 +20,4 @@
 #pragma mark - ImagesConfiguratorImplementation
 
 @interface ImagesConfiguratorImplementation : NSObject<ImagesConfiguration>
--(void) configure:(ImagesViewController *) imageViewController;
 @end

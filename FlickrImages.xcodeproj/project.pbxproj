@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24EBC30521E62C7A00DA9933 /* MarkConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EBC30421E62C7A00DA9933 /* MarkConfigurator.m */; };
+		24EBC30821E62E2F00DA9933 /* MarkViewRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EBC30721E62E2F00DA9933 /* MarkViewRouter.m */; };
+		24EBC30B21E6331A00DA9933 /* MarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EBC30A21E6331A00DA9933 /* MarkViewController.m */; };
+		24EBC30E21E636FE00DA9933 /* MarkPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EBC30D21E636FE00DA9933 /* MarkPresenter.m */; };
 		2A3A884C21D36FBF0069C287 /* FlickrTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3A884B21D36FBF0069C287 /* FlickrTableViewCell.m */; };
 		2A3BEE3E21E4A90600D43CE3 /* ImageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3BEE3D21E4A90600D43CE3 /* ImageRequest.m */; };
 		2A3C00F921CFD73600BF418E /* FlickrTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A3C00F821CFD73600BF418E /* FlickrTableViewCell.xib */; };
@@ -26,6 +30,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24EBC30321E62C5B00DA9933 /* MarkConfigurator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkConfigurator.h; sourceTree = "<group>"; };
+		24EBC30421E62C7A00DA9933 /* MarkConfigurator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarkConfigurator.m; sourceTree = "<group>"; };
+		24EBC30621E62D2F00DA9933 /* MarkViewRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkViewRouter.h; sourceTree = "<group>"; };
+		24EBC30721E62E2F00DA9933 /* MarkViewRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarkViewRouter.m; sourceTree = "<group>"; };
+		24EBC30921E632C000DA9933 /* MarkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkViewController.h; sourceTree = "<group>"; };
+		24EBC30A21E6331A00DA9933 /* MarkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarkViewController.m; sourceTree = "<group>"; };
+		24EBC30C21E6355500DA9933 /* MarkPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkPresenter.h; sourceTree = "<group>"; };
+		24EBC30D21E636FE00DA9933 /* MarkPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarkPresenter.m; sourceTree = "<group>"; };
 		2A3A884B21D36FBF0069C287 /* FlickrTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickrTableViewCell.m; sourceTree = "<group>"; };
 		2A3A884D21D36FE10069C287 /* FlickrTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlickrTableViewCell.h; sourceTree = "<group>"; };
 		2A3BEE3D21E4A90600D43CE3 /* ImageRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageRequest.m; sourceTree = "<group>"; };
@@ -69,9 +81,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24EBC30221E62B9E00DA9933 /* MarkImages */ = {
+			isa = PBXGroup;
+			children = (
+				24EBC30321E62C5B00DA9933 /* MarkConfigurator.h */,
+				24EBC30421E62C7A00DA9933 /* MarkConfigurator.m */,
+				24EBC30621E62D2F00DA9933 /* MarkViewRouter.h */,
+				24EBC30721E62E2F00DA9933 /* MarkViewRouter.m */,
+				24EBC30921E632C000DA9933 /* MarkViewController.h */,
+				24EBC30A21E6331A00DA9933 /* MarkViewController.m */,
+				24EBC30C21E6355500DA9933 /* MarkPresenter.h */,
+				24EBC30D21E636FE00DA9933 /* MarkPresenter.m */,
+			);
+			path = MarkImages;
+			sourceTree = "<group>";
+		};
 		2A3A884521D36EE50069C287 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				24EBC30221E62B9E00DA9933 /* MarkImages */,
 				2A3A884621D36EF20069C287 /* Images */,
 			);
 			path = Scenes;
@@ -297,16 +325,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24EBC30821E62E2F00DA9933 /* MarkViewRouter.m in Sources */,
 				2A8BD38521CE7BEF001B7461 /* ImagesViewController.m in Sources */,
 				2A3BEE3E21E4A90600D43CE3 /* ImageRequest.m in Sources */,
 				2A3A884C21D36FBF0069C287 /* FlickrTableViewCell.m in Sources */,
 				2ACBD20521D4E72E00465C93 /* DisplayImages.m in Sources */,
 				2A81DD3321DFCC2F0000E417 /* NetworkManager.m in Sources */,
 				2A8BD39021CE7BF1001B7461 /* main.m in Sources */,
+				24EBC30521E62C7A00DA9933 /* MarkConfigurator.m in Sources */,
 				2A81DD3121DFBCB00000E417 /* ApiImagesGateway.m in Sources */,
 				2A6D848C21D4CF8500FA45C8 /* ImagesConfigurator.m in Sources */,
 				2A8BD38221CE7BEF001B7461 /* AppDelegate.m in Sources */,
+				24EBC30B21E6331A00DA9933 /* MarkViewController.m in Sources */,
 				2ACBD21121D51FA900465C93 /* ImagesPresenter.m in Sources */,
+				24EBC30E21E636FE00DA9933 /* MarkPresenter.m in Sources */,
 				2A3C00FD21CFE3F000BF418E /* Image.m in Sources */,
 				2ACBD20F21D51F4B00465C93 /* ImagesViewRouter.m in Sources */,
 			);

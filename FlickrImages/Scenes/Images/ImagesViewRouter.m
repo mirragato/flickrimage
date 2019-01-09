@@ -11,11 +11,14 @@
 @implementation ImagesViewRouterImplementation
 
 - (instancetype)init: (ImagesViewController *)imageViewController {
-    self.imageViewController = imageViewController;
+    _imageViewController = imageViewController;
 
     return self;
 }
 - (void)detail {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Images" bundle:nil];
+    MarkViewController *markViewController = (MarkViewController *)[storyboard instantiateViewControllerWithIdentifier:@"MarkViewController"];
+    [_imageViewController.navigationController pushViewController:markViewController animated:YES];
 }
 
 @end
