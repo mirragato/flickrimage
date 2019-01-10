@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "ImagesGateway.h"
-
-@class ApiImagesGatewayImplementation;
+#import "ApiImagesGateway.h"
+#import "LocalPersistenceImagesGateway.h"
 
 @interface CacheImagesGateway : NSObject<ImagesGateway>
 @property (nonatomic, strong) ApiImagesGatewayImplementation* apiImagesGateway;
+@property (nonatomic, strong) CoreDataImagesGateway* coreDataGateway;
 
--(instancetype)init: (ApiImagesGatewayImplementation*) apiImagesGateway;
+-(instancetype)initWithAPI: (ApiImagesGatewayImplementation*) apiImagesGateway coreData: (CoreDataImagesGateway*) coreDataGateway;
 @end

@@ -10,14 +10,20 @@
 
 @implementation CacheImagesGateway
 
--(instancetype)init: (ApiImagesGatewayImplementation*) apiImagesGateway {
+-(instancetype)initWithAPI: (ApiImagesGatewayImplementation*) apiImagesGateway coreData: (CoreDataImagesGateway*) coreDataGateway {
     _apiImagesGateway = apiImagesGateway;
+    _coreDataGateway = coreDataGateway;
 
     return self;
 }
 
 - (void)fetchImages:(FetchImageEntityGatewayCompletion)onSuccess onFailure:(void (^)(NSError *))onFailure {
-    
+    [_apiImagesGateway fetchImages:^(NSArray<Image *>* images) {
+        [_coreDataGateway save:images];
+        onSuccess(images);
+    } onFailure:^(NSError* error) {
+        [self->_coreDataGateway fetchImages:onSuccess onFailure:onFailure];
+    }];
 }
 
 @end

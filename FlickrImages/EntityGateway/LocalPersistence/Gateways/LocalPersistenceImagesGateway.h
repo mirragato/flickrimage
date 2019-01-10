@@ -16,4 +16,5 @@
 @protocol ImagesGateway;
 
 @interface CoreDataImagesGateway : NSObject<ImagesGateway>
+-(void)save:(NSArray<Image*>*) images;
 @end
