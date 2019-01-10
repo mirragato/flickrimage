@@ -15,6 +15,7 @@
     _view = view;
     _router = router;
     _displayImagesUseCase = displayImagesUseCase;
+
     return self;
 }
 
@@ -26,6 +27,7 @@
     if (_images == nil) {
         return 0;
     }
+
     return _images.count;
 }
 
@@ -36,6 +38,10 @@
     } onFailure:^(NSError* error) {
         [self handleError:error];
     }];
+}
+
+- (void)changeMarkState:(Image *)image {
+    image.mark = image.mark ? NO : YES;
 }
 
 -(void) handleError: (NSError*) error {

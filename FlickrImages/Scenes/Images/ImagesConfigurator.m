@@ -19,6 +19,7 @@
 - (void)configure:(ImagesViewController *) imageViewController {
 
     ApiImagesGatewayImplementation *apiImagesGateway = [[ApiImagesGatewayImplementation alloc] init];
+
     DisplayImagesListUseCaseImplementation *imageList = [[DisplayImagesListUseCaseImplementation alloc] init: apiImagesGateway];
     ImagesViewRouterImplementation *router = [[ImagesViewRouterImplementation alloc] init:imageViewController];
     ImagesPresenterImplementation *presenter = [[ImagesPresenterImplementation alloc] init: imageViewController with: router displayImage:imageList];

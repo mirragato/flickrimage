@@ -33,6 +33,7 @@
 }
 
 - (void)removeMarkPressed:(Image *)image {
+    image.mark = image.mark ? NO : YES;
     [_images removeObject:image];
     [self viewDidLoad];
 }

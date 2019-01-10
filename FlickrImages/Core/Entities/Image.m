@@ -16,15 +16,15 @@
 @synthesize server;
 @synthesize title;
 @synthesize url;
+@synthesize mark;
 
 - (id)initWithImageId:(NSString *)_id
                  farm:(NSString *)_farm
                secret:(NSString *)_secret
                server:(NSString *)_server
                 title:(NSString *)_title
-                  url:(NSURL *)_url{
-
-
+                  url:(NSURL *)_url
+                 mark:(BOOL)_mark {
 
     self = [super init];
     if (self)
@@ -35,12 +35,14 @@
         self.server = _server;
         self.title = _title;
         self.url = _url;
+        self.mark = _mark;
     }
+
     return self;
 }
 
 - (NSURL*) getImageUrl {
-    return [[NSURL alloc]initWithString:@"https://farm\(farm).staticflickr.com/\(server)/\(imageId)_\(secret)_m.jpg"];
+    return [[NSURL alloc] initWithString:@"https://farm\(farm).staticflickr.com/\(server)/\(imageId)_\(secret)_m.jpg"];
 }
 
 @end

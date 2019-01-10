@@ -16,13 +16,15 @@
 @property (nonatomic, strong) NSString* server;
 @property (nonatomic, strong) NSString* title;
 @property (nonatomic, strong) NSURL* url;
+@property (nonatomic) BOOL mark;
 
 - (id)initWithImageId:(NSString *)_id
                  farm:(NSString *)_farm
                secret:(NSString *)_secret
                server:(NSString *)_server
                 title:(NSString *)_title
-                  url:(NSURL *)_url;
+                  url:(NSURL *)_url
+                 mark:(BOOL)_mark;
 
 - (NSURL*) getImageUrl;
 

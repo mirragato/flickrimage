@@ -100,7 +100,7 @@ NSString *const identifierFlickrCell = @"FlickrTableViewCell";
 #pragma mark - MarkTableViewCellDelegate
 
 - (void)didChangeMarkState: (Image*) image {
-   // [_presenter addMarkPressed:image];
+    [_presenter changeMarkState:image];
 }
 
 @end
