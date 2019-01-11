@@ -24,7 +24,7 @@
                server:(NSString *)_server
                 title:(NSString *)_title
                   url:(NSURL *)_url
-                 mark:(BOOL)_mark {
+                 mark:(bool)_mark {
 
     self = [super init];
     if (self)
@@ -43,6 +43,14 @@
 
 - (NSURL*) getImageUrl {
     return [[NSURL alloc] initWithString:@"https://farm\(farm).staticflickr.com/\(server)/\(imageId)_\(secret)_m.jpg"];
+}
+
+- (NSString*) getUrlToString {
+    return [self.url absoluteString];
+}
+            
+- (NSURL*) getUrlToString: (NSString*) string {
+    return [NSURL URLWithString:string];
 }
 
 @end

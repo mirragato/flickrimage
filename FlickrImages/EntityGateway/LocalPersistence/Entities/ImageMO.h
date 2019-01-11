@@ -20,7 +20,7 @@
 @property (nonatomic, strong) NSString* server;
 @property (nonatomic, strong) NSString* title;
 @property (nonatomic, strong) NSURL* url;
-@property (nonatomic) BOOL mark;
+@property (nonatomic, strong) NSNumber* mark;
 
 - (Image *) toEntity;
 

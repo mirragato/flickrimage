@@ -16,7 +16,7 @@
 @property (nonatomic, strong) NSString* server;
 @property (nonatomic, strong) NSString* title;
 @property (nonatomic, strong) NSURL* url;
-@property (nonatomic) BOOL mark;
+@property (nonatomic) bool mark;
 
 - (id)initWithImageId:(NSString *)_id
                  farm:(NSString *)_farm
@@ -24,8 +24,9 @@
                server:(NSString *)_server
                 title:(NSString *)_title
                   url:(NSURL *)_url
-                 mark:(BOOL)_mark;
+                 mark:(bool)_mark;
 
 - (NSURL*) getImageUrl;
+- (NSURL*) getUrlToString: (NSString*) string;
 
 @end

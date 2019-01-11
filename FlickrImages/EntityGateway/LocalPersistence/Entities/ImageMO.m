@@ -25,7 +25,7 @@
                                    server:self.server
                                     title:self.title
                                       url:self.url
-                                     mark:self.mark];
+                                     mark:[self.mark boolValue]];
 }
 
 @end

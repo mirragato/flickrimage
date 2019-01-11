@@ -11,6 +11,7 @@
 		24EBC30821E62E2F00DA9933 /* MarkViewRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EBC30721E62E2F00DA9933 /* MarkViewRouter.m */; };
 		24EBC30B21E6331A00DA9933 /* MarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EBC30A21E6331A00DA9933 /* MarkViewController.m */; };
 		24EBC30E21E636FE00DA9933 /* MarkPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EBC30D21E636FE00DA9933 /* MarkPresenter.m */; };
+		24EBC31121E896A300DA9933 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24EBC31021E896A200DA9933 /* CoreData.framework */; };
 		2A3A884C21D36FBF0069C287 /* FlickrTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3A884B21D36FBF0069C287 /* FlickrTableViewCell.m */; };
 		2A3AF18A21E73D4A0010A185 /* Image.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A3AF18821E73D4A0010A185 /* Image.xcdatamodeld */; };
 		2A3AF18E21E743970010A185 /* ImageMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3AF18D21E743970010A185 /* ImageMO.m */; };
@@ -43,6 +44,7 @@
 		24EBC30A21E6331A00DA9933 /* MarkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarkViewController.m; sourceTree = "<group>"; };
 		24EBC30C21E6355500DA9933 /* MarkPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkPresenter.h; sourceTree = "<group>"; };
 		24EBC30D21E636FE00DA9933 /* MarkPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarkPresenter.m; sourceTree = "<group>"; };
+		24EBC31021E896A200DA9933 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2A3A884B21D36FBF0069C287 /* FlickrTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickrTableViewCell.m; sourceTree = "<group>"; };
 		2A3A884D21D36FE10069C287 /* FlickrTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlickrTableViewCell.h; sourceTree = "<group>"; };
 		2A3AF18921E73D4A0010A185 /* Image.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Image.xcdatamodel; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24EBC31121E896A300DA9933 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +111,14 @@
 				24EBC30A21E6331A00DA9933 /* MarkViewController.m */,
 			);
 			path = MarkImages;
+			sourceTree = "<group>";
+		};
+		24EBC30F21E896A200DA9933 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24EBC31021E896A200DA9933 /* CoreData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		2A3A884521D36EE50069C287 /* Scenes */ = {
@@ -236,6 +247,7 @@
 			children = (
 				2A8BD37F21CE7BEF001B7461 /* FlickrImages */,
 				2A8BD37E21CE7BEF001B7461 /* Products */,
+				24EBC30F21E896A200DA9933 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
