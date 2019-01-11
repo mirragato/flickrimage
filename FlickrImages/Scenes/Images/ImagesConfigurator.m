@@ -11,16 +11,19 @@
 #import "DisplayImages.h"
 #import "ImagesPresenter.h"
 #import "ApiImagesGateway.h"
+#import "CacheImagesGateway.h"
 
 #pragma mark - ImagesConfiguratorImplementation
 
 @implementation ImagesConfiguratorImplementation
 
 - (void)configure:(ImagesViewController *) imageViewController {
-
+    CoreDataImagesGateway* coreDataGateway = [[CoreDataImagesGateway alloc] init];
     ApiImagesGatewayImplementation *apiImagesGateway = [[ApiImagesGatewayImplementation alloc] init];
 
-    DisplayImagesListUseCaseImplementation *imageList = [[DisplayImagesListUseCaseImplementation alloc] init: apiImagesGateway];
+    CacheImagesGateway* cacheGateway = [[CacheImagesGateway alloc] initWithAPI:apiImagesGateway coreData:coreDataGateway];
+
+    DisplayImagesListUseCaseImplementation *imageList = [[DisplayImagesListUseCaseImplementation alloc] init: cacheGateway];
     ImagesViewRouterImplementation *router = [[ImagesViewRouterImplementation alloc] init:imageViewController];
     ImagesPresenterImplementation *presenter = [[ImagesPresenterImplementation alloc] init: imageViewController with: router displayImage:imageList];
     imageViewController.presenter = presenter;
