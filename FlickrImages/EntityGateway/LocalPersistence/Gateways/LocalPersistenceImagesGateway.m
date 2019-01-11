@@ -22,26 +22,34 @@
 
     NSError *error = nil;
     NSArray *results = [self.context executeFetchRequest:self.request error:&error];
+    NSMutableArray *images = [[NSMutableArray alloc] initWithCapacity:100];
+
+    for (ImageMO* image in  results) {
+        [images addObject:image.toEntity];
+    }
+
     if (!results) {
         onFailure(error);
     }
 
-    onSuccess(results);
+    onSuccess(images);
 }
 
 -(void)save:(NSArray<Image*>*) images {
     NSString* entityName = @"ImageMO";
     [self deleteAllEntities:entityName];
     for (Image* image in images) {
-        NSManagedObject *newObject = [NSEntityDescription insertNewObjectForEntityForName:entityName inManagedObjectContext:self.context];
+        ImageMO *newObject = [NSEntityDescription insertNewObjectForEntityForName:entityName inManagedObjectContext:self.context];
         [newObject setValue:image.imageId forKey:@"imageId"];
         [newObject setValue:image.secret forKey:@"secret"];
-        [newObject setValue:image.farm forKey:@"farm"];
+        NSString *farmString = [NSString stringWithFormat:@"%@", image.farm, nil];
+        [newObject setValue:farmString forKey:@"farm"];
         [newObject setValue:image.server forKey:@"server"];
-        [newObject setValue:image.title forKey:@"city"];
-        [newObject setValue:image.url forKey:@"url"];
+        [newObject setValue:image.title forKey:@"title"];
+        [newObject setValue:image.getStringToUrl forKey:@"url"];
         NSNumber *boolAsNumber = [NSNumber numberWithBool:image.mark];
         [newObject setValue:boolAsNumber forKey:@"mark"];
+        
         NSError *error = nil;
         [self.context save:&error];
     }

@@ -21,15 +21,15 @@
 }
 
 -(NSPersistentContainer*) persistentContainer {
-    NSPersistentContainer* persistentContainer = [[NSPersistentContainer alloc] initWithName:@"Image"];
-    [self.persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *description, NSError *error) {
+    _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"Image"];
+    [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *description, NSError *error) {
         if (error != nil) {
             NSLog(@"Failed to load Core Data stack: %@", error);
             abort();
         }
     }];
 
-    return persistentContainer;
+    return _persistentContainer;
 }
 
 -(void) saveContext {

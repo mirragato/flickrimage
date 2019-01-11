@@ -11,8 +11,10 @@
 #import "Image.h"
 #import "ImagesGateway.h"
 #import "CoreDataStack.h"
+#import "ImageMO.h"
 
 @class Image;
+@class ImageMO;
 @protocol ImagesGateway;
 
 @interface CoreDataImagesGateway : NSObject<ImagesGateway>

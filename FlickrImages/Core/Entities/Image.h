@@ -28,5 +28,6 @@
 
 - (NSURL*) getImageUrl;
 - (NSURL*) getUrlToString: (NSString*) string;
+- (NSString*) getStringToUrl;
 
 @end

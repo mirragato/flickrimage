@@ -45,7 +45,7 @@
     return [[NSURL alloc] initWithString:@"https://farm\(farm).staticflickr.com/\(server)/\(imageId)_\(secret)_m.jpg"];
 }
 
-- (NSString*) getUrlToString {
+- (NSString*) getStringToUrl {
     return [self.url absoluteString];
 }
             

@@ -53,11 +53,11 @@ NSString *const baseURL = @"https://www.flickr.com/services/rest/";
         if ([result isKindOfClass:[NSDictionary class]]) {
             response = [[FlickrAPIResponse alloc] initWithJSON:result keyForResults:@"photos.photo"];
 
-            if ([response.results isKindOfClass:[NSArray class]]){
+            if ([response.results isKindOfClass:[NSArray class]]) {
                 NSArray *parsedResults = response.results;
                 NSMutableArray *results = [[NSMutableArray alloc] initWithCapacity:100];
 
-                for (NSDictionary *dictionary in parsedResults){
+                for (NSDictionary *dictionary in parsedResults) {
                     Image *image = [Image initWithJSON: dictionary];
                     [results addObject:image];
                 }
