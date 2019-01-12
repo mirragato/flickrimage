@@ -40,15 +40,16 @@
     [self deleteAllEntities:entityName];
     for (Image* image in images) {
         ImageMO *newObject = [NSEntityDescription insertNewObjectForEntityForName:entityName inManagedObjectContext:self.context];
-        [newObject setValue:image.imageId forKey:@"imageId"];
-        [newObject setValue:image.secret forKey:@"secret"];
+        newObject.imageId = image.imageId;
+        newObject.secret = image.secret;
         NSString *farmString = [NSString stringWithFormat:@"%@", image.farm, nil];
-        [newObject setValue:farmString forKey:@"farm"];
-        [newObject setValue:image.server forKey:@"server"];
-        [newObject setValue:image.title forKey:@"title"];
-        [newObject setValue:image.getStringToUrl forKey:@"url"];
+        newObject.farm = farmString;
+        newObject.server = image.server;
+        newObject.title = image.title;
+        newObject.url = image.getUrlToString;
+        newObject.title = image.title;
         NSNumber *boolAsNumber = [NSNumber numberWithBool:image.mark];
-        [newObject setValue:boolAsNumber forKey:@"mark"];
+        newObject.mark = boolAsNumber;
         
         NSError *error = nil;
         [self.context save:&error];
@@ -56,11 +57,8 @@
 }
 
 -(void)deleteAllEntities:(NSString *) nameEntity {
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:nameEntity];
-    [fetchRequest setIncludesPropertyValues:NO];
-    
     NSError *error;
-    NSArray *fetchedObjects = [self.context executeFetchRequest:fetchRequest error:&error];
+    NSArray *fetchedObjects = [self.context executeFetchRequest:self.request error:&error];
     for (NSManagedObject *object in fetchedObjects) {
         [self.context deleteObject:object];
     }

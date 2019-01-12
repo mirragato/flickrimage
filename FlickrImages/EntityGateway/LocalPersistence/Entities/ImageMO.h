@@ -10,17 +10,15 @@
 #import <CoreData/CoreData.h>
 #import "Image.h"
 
-@class Image;
-
 @interface ImageMO : NSManagedObject
 
-@property (nonatomic, strong) NSString* imageId;
-@property (nonatomic, strong) NSString* secret;
-@property (nonatomic, strong) NSString* farm;
-@property (nonatomic, strong) NSString* server;
-@property (nonatomic, strong) NSString* title;
-@property (nonatomic, strong) NSURL* url;
-@property (nonatomic, strong) NSNumber* mark;
+@property (nonatomic, retain) NSString* imageId;
+@property (nonatomic, retain) NSString* secret;
+@property (nonatomic, retain) NSString* farm;
+@property (nonatomic, retain) NSString* server;
+@property (nonatomic, retain) NSString* title;
+@property (nonatomic, retain) NSString* url;
+@property (nonatomic, retain) NSNumber* mark;
 
 - (Image *) toEntity;
 

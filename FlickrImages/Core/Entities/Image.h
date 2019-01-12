@@ -27,7 +27,7 @@
                  mark:(bool)_mark;
 
 - (NSURL*) getImageUrl;
-- (NSURL*) getUrlToString: (NSString*) string;
-- (NSString*) getStringToUrl;
+- (NSURL*) getStringToUrl: (NSString*) string;
+- (NSString*) getUrlToString;
 
 @end

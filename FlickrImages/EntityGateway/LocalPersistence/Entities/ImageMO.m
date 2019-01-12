@@ -24,7 +24,7 @@
                                    secret:self.farm
                                    server:self.server
                                     title:self.title
-                                      url:self.url
+                                      url:[NSURL URLWithString:self.url]
                                      mark:[self.mark boolValue]];
 }
 
