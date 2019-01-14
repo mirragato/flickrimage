@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FlickrImages/EntityGateway/Cache/CacheImagesGateway.m"
-            timestampString = "568912578.4201519"
+            filePath = "FlickrImages/EntityGateway/LocalPersistence/Gateways/LocalPersistenceImagesGateway.m"
+            timestampString = "569170684.975453"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "-fetchImages:onFailure:"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "-deleteAllEntities:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,60 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickrImages/EntityGateway/Cache/CacheImagesGateway.m"
-            timestampString = "568912578.420642"
+            timestampString = "568913556.721011"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "-fetchImages:onFailure:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[CacheImagesGateway fetchImages:onFailure:]"
-                  moduleName = "FlickrImages"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/irina_revkina/flickrimage/FlickrImages/EntityGateway/Cache/CacheImagesGateway.m"
-                  timestampString = "568902979.951755"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "114">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__44-[CacheImagesGateway fetchImages:onFailure:]_block_invoke"
-                  moduleName = "FlickrImages"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/irina_revkina/flickrimage/FlickrImages/EntityGateway/Cache/CacheImagesGateway.m"
-                  timestampString = "568902979.955037"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_"
-                  moduleName = "FlickrImages"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/irina_revkina/flickrimage/FlickrImages/EntityGateway/Cache/CacheImagesGateway.m"
-                  timestampString = "568902979.9585069"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -88,13 +41,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FlickrImages/EntityGateway/Cache/CacheImagesGateway.m"
-            timestampString = "568912578.420716"
+            filePath = "FlickrImages/EntityGateway/LocalPersistence/Gateways/LocalPersistenceImagesGateway.m"
+            timestampString = "569170684.976002"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "-fetchImages:onFailure:"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "-save:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlickrImages/EntityGateway/LocalPersistence/Gateways/LocalPersistenceImagesGateway.m"
+            timestampString = "569170684.976336"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "-save:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -39,7 +39,7 @@
     NSString* entityName = @"ImageMO";
     [self deleteAllEntities:entityName];
     for (Image* image in images) {
-        ImageMO *newObject = [NSEntityDescription insertNewObjectForEntityForName:entityName inManagedObjectContext:self.context];
+        ImageMO *newObject = [NSEntityDescription insertNewObjectForEntityForName:entityName inManagedObjectContext:[self context]];
         newObject.imageId = image.imageId;
         newObject.secret = image.secret;
         NSString *farmString = [NSString stringWithFormat:@"%@", image.farm, nil];
@@ -52,7 +52,9 @@
         newObject.mark = boolAsNumber;
         
         NSError *error = nil;
-        [self.context save:&error];
+        if ([[self context] save:&error] == NO) {
+            NSAssert(NO, @"Error saving context: %@\n%@", [error localizedDescription], [error userInfo]);
+        }
     }
 }
 
